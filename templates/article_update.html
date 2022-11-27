@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Edit</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form|crispy}}
+    <button class="btn btn-info" type="submit">Update</button>
+</form>
+<p><a href="{% url 'article_detail' article.pk %}">Back to Article</a></p>
+{% endblock content %}
