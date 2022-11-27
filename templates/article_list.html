@@ -16,6 +16,7 @@
         <a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a>
     </div>
     <div class="class-footer">
+        <p><a href="{% url 'article_detail' article.pk %}">Leave Comment</a></p>
         {% for comment in article.comment_set.all %}
         <p>
             <span class="font-weight-bold">
